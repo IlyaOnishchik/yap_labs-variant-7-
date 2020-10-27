@@ -1,0 +1,42 @@
+using System;
+
+namespace yap_lab_3._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = Convert.ToInt32(Console.ReadLine()); ;
+
+            switch (n)
+            {
+                case 1:
+                    for (int a = 1; a < 23; a++)
+                    {
+
+                        Console.Write($"{22 / a + 22 % a}\t");
+                        Console.WriteLine(new string('-', 22 / a + 22 % a));
+                    }
+                    break;
+                case 2:
+                    int b = 1;
+                    while (b < 23)
+                    {
+                        Console.Write($"{22 / b + 22 % b}\t");
+                        Console.WriteLine(new string('-', 22 / b + 22 % b));
+                        b++;
+                    };
+                    break;
+                case 3:
+                    int c = 1;
+                    do
+                    {
+                        Console.Write($"{22 / c + 22 % c}\t");
+                        Console.WriteLine(new string('-', 22 / c + 22 % c));
+                        c++;
+                    } while (c < 23);
+                    break;
+            }
+        }
+    }
+}
