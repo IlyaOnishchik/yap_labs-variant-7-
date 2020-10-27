@@ -1,0 +1,88 @@
+using System;
+
+namespace yap_lab_4._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Выберите номер задания - ");
+            int x = int.Parse(Console.ReadLine());
+            switch (x)
+            {
+                case 1:
+                    Console.Write("Введите размерность доски n - ");
+                    int n = int.Parse(Console.ReadLine());
+                    if (n % 2 == 1)
+                        Console.WriteLine("Количество чёрных ячеек - {0}", Math.Pow(n, 2) / 2 + 0.5);
+                    else Console.WriteLine("Количество чёрных ячеек - {0}", Math.Pow(n, 2) / 2);
+                    break;
+                case 2:
+                    Console.Write("Введите k - ");
+                    int k = int.Parse(Console.ReadLine());
+                    Console.Write("Введите m - ");
+                    int m = int.Parse(Console.ReadLine());
+                    if ((k + m) % 2 == 1)
+                        Console.WriteLine("ячейка ({0},{1}) - белая", k, m);
+                    else Console.WriteLine("ячейка ({0},{1}) - чёрная", k, m);
+                    break;
+                case 3:
+                    Console.Write("Введите k1 - ");
+                    int k1 = int.Parse(Console.ReadLine());
+                    Console.Write("Введите m1 - ");
+                    int m1 = int.Parse(Console.ReadLine());
+                    Console.Write("Введите k2 - ");
+                    int k2 = int.Parse(Console.ReadLine());
+                    Console.Write("Введите m2 - ");
+                    int m2 = int.Parse(Console.ReadLine());
+                    if ((k1 + m1) % 2 == (k2 + m2) % 2)
+                        Console.WriteLine("ячейки одного цвета");
+                    else Console.WriteLine("ячейки разных цветов");
+                    break;
+                case 4:
+                    Console.Write("1.Пешка\n2.Слон\n3.Ладь\n4.Ферзь\n5.Конь\n");
+                    Console.Write("Выберите фигуру - ");
+                    int x1 = int.Parse(Console.ReadLine());
+                    Console.Write("Введите k1 - ");
+                    int k3 = int.Parse(Console.ReadLine());
+                    Console.Write("Введите m1 - ");
+                    int m3 = int.Parse(Console.ReadLine());
+                    Console.Write("Введите k2 - ");
+                    int k4 = int.Parse(Console.ReadLine());
+                    Console.Write("Введите m2 - ");
+                    int m4 = int.Parse(Console.ReadLine());
+                    switch (x1)
+                    {
+                        case 1:
+                            if (Math.Abs(k4 - k3) == 1 && Math.Abs(m4 - m3) == 1)
+                                Console.WriteLine($"Фигура в ячейке ({k3},{m3}) находится под ударом пешки в ячейке ({k4},{m4})");
+                            else Console.WriteLine($"Фигура в ячейке ({k3},{m3}) не находится под ударом пешки в ячейке ({k4},{m4})");
+                            break;
+                        case 2:
+                            if(Math.Abs(k4 - k3) == Math.Abs(m4 - m3))
+                                Console.WriteLine($"Фигура в ячейке ({k3},{m3}) находится под ударом слона в ячейке ({k4},{m4})");
+                            else Console.WriteLine($"Фигура в ячейке ({k3},{m3}) не находится под ударом слона в ячейке ({k4},{m4})");
+                            break;
+                        case 3:
+                            if (k4 == k3 || m4 == m3)
+                                Console.WriteLine($"Фигура в ячейке ({k3},{m3}) находится под ударом ладьи в ячейке ({k4},{m4})");
+                            else Console.WriteLine($"Фигура в ячейке ({k3},{m3}) не находится под ударом ладьи в ячейке ({k4},{m4})");
+                            break;
+                        case 4:
+                            if((k4 == k3 || m4 == m3) || Math.Abs(k4 - k3) == Math.Abs(m4 - m3))
+                                Console.WriteLine($"Фигура в ячейке ({k3},{m3}) находится под ударом ферзя в ячейке ({k4},{m4})");
+                            else Console.WriteLine($"Фигура в ячейке ({k3},{m3}) не находится под ударом ферзя в ячейке ({k4},{m4})");
+                            break;
+                        case 5:
+                            if ((Math.Abs(k4 - k3) == 2 && Math.Abs(m4 - m3) == 1) || (Math.Abs(k4 - k3) == 1 && Math.Abs(m4 - m3) == 2))
+                                Console.WriteLine($"Фигура в ячейке ({k3},{m3}) находится под ударом коня в ячейке ({k4},{m4})");
+                            else Console.WriteLine($"Фигура в ячейке ({k3},{m3}) не находится под ударом коня в ячейке ({k4},{m4})");
+                            break;
+                    }
+                    break;
+                case 0:
+                    break;
+            }
+        }
+    }
+}
