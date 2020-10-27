@@ -1,0 +1,18 @@
+using System;
+using System.Security.Cryptography.X509Certificates;
+
+namespace yap_lab_2._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("x = ");
+            double x = double.Parse(Console.ReadLine());
+            double z1 = (x * x + 2 * x - 3 + (x + 1) * Math.Sqrt(x * x - 9))/(x * x - 2 * x - 3 + (x - 1) * Math.Sqrt(x * x - 9));
+            Console.WriteLine("z1 = {0}", z1);
+            double z2 = Math.Sqrt((x+3)/(x-3));
+            Console.WriteLine("z2 = {0}", z2);
+        }
+    }
+}
