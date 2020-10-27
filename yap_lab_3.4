@@ -1,0 +1,36 @@
+using System;
+
+namespace yap_lab_3._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите x нач. = ");
+            double x = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите x конеч. = ");
+            double x_fn = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите шаг dx = ");
+            double dx = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите e = ");
+            double e = Convert.ToDouble(Console.ReadLine());
+
+            while (x <= x_fn)
+            {
+                double sum = Math.PI/2;
+                double an = 1.0;
+                double deminator = 1.0;
+                int n = 1;
+                for (int i = 1; Math.Abs(an) > e; i++, n++)
+                {
+                    double numerator = Math.Pow(-1, n + 1);
+                    deminator *= (2 * n + 1) * Math.Pow(x, 2 * n + 1);
+                    an = numerator / deminator;
+                    sum += an;
+                }
+                Console.WriteLine($"{x} \t{sum} \t{n}");
+                x += dx;
+            }
+        }
+    }
+}
