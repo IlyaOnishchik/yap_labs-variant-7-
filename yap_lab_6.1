@@ -1,0 +1,40 @@
+using System;
+
+namespace yap_lab_6._1
+{
+    class Program
+    {
+        static void input(ref int[] array, int size)
+        {
+            Console.WriteLine("Введите массив");
+            for (int i = 0; i < size; i++)
+            {
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+        static void function(ref int[] array, int size, int a, int b)
+        {
+            int sum = 0;
+            for (int i = 0; i < size; i++)
+            {
+                if (array[i] >= a && array[i] <= b)
+                    sum+=array[i];
+            }
+            Console.WriteLine($"Сумма элементов, попавших в интервал {sum}");
+        }
+
+        static void Main(string[] args)
+        {
+            Console.Write("Введите границу a интервала [a, b] = ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите границу b интервала [a, b] = ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите размер массива = ");
+            int size = Convert.ToInt32(Console.ReadLine());
+
+            int[] array = new int[size];
+            input(ref array, size);
+            function(ref array, size, a, b);
+        }
+    }
+}
