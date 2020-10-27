@@ -1,0 +1,103 @@
+using System;
+
+namespace yap_lab_1._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите номер задания - ");
+            int i = int.Parse(Console.ReadLine());
+            switch (i)
+            {
+            case 1:
+            {
+                        Console.Write("a= ");
+                        int a = int.Parse(Console.ReadLine());
+                        Console.Write("b= ");
+                        int b = int.Parse(Console.ReadLine());
+                        Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
+                        break;
+            }
+            case 2:
+            {
+                        Console.Write("a= ");
+                        int a = int.Parse(Console.ReadLine());
+                        Console.Write("b= ");
+                        int b = int.Parse(Console.ReadLine());
+                        Console.WriteLine("{0}+{1}={2}+{3}", a, b, b, a);
+                        break;
+            }
+            case 3:
+            {
+                        Console.Write("a= ");
+                        int a = int.Parse(Console.ReadLine());
+                        Console.Write("b= ");
+                        int b = int.Parse(Console.ReadLine());
+                        Console.Write("c= ");
+                        int c = int.Parse(Console.ReadLine());
+                        Console.WriteLine("{0}+{1}+{2}={3}", a, b, c, a+b+c);
+                        break;
+            }
+            case 4:
+            {
+                        Console.Write("a = ");
+                        double a = double.Parse(Console.ReadLine());
+                        Console.Write("b = ");
+                        double b = double.Parse(Console.ReadLine());
+                        Console.WriteLine("{0:f1} * {1:f1} = {2:.f1} ", a, b, a * b);
+                        break;
+            }
+            case 5:
+            {
+                        Console.Write("a = ");
+                        double a = double.Parse(Console.ReadLine());
+                        Console.Write("b = ");
+                        double b = double.Parse(Console.ReadLine());
+                        Console.WriteLine("{0:f3} / {1:f3} = {2:f3} ", a, b, a / b);
+                        break;
+            }
+            case 6:
+            {
+                        Console.Write("a = ");
+                        double a = double.Parse(Console.ReadLine());
+                        Console.Write("b = ");
+                        double b = double.Parse(Console.ReadLine());
+                        Console.Write("c = ");
+                        double c = double.Parse(Console.ReadLine());
+                        Console.WriteLine("({0:f2} + {1:f2}) + {2:f2} = {0:f2} + ({1:f2} + {2:f2})", a, b, c, a, b, c);
+                        break;
+            }
+            case 7:
+            {
+                        Console.WriteLine("C format: {0:C}", 99989.987);
+                        Console.WriteLine("D9 format: {0:D9}", 99999);
+                        Console.WriteLine("E format: {0:E}", .31415926538 * 10);
+                        Console.WriteLine("F format: {0:F3}", 55555.6666);
+                        Console.WriteLine("N format: {0:N}", 99999);
+                        Console.WriteLine("X format: {0:X}", 99999);
+                        Console.WriteLine("x format: {0:x}", 99999);
+                        Console.WriteLine("\n\n");
+                        break;
+            }
+            case 8:
+            {
+                        int a = int.Parse(Console.ReadLine());
+                        Console.Write(" -> {0:x}\n", a);
+                        int b = int.Parse(Console.ReadLine());
+                        Console.Write(" -> {0:x}\n", b);
+                        int c = int.Parse(Console.ReadLine());
+                        Console.Write(" -> {0:x}\n", c);
+                        int d = int.Parse(Console.ReadLine());
+                        Console.Write(" -> {0:x}\n", d);
+                        break;
+            }
+            case 9:
+            {
+                        Console.WriteLine("Однажды в студёную зимнюю пору\nЯ из лесу вышел.\nБыл сильный мороз...\n\t\tА.С.Пушкин");
+                        break;
+            }
+            }
+        }
+    }
+}
