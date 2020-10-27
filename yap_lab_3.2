@@ -1,0 +1,34 @@
+using System;
+
+namespace yap_lab_2._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите координату x нач. = ");
+            double x = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите координату x конеч. = ");
+            double x_finish = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите шаг dx = ");
+            double dx = Convert.ToDouble(Console.ReadLine());
+
+            double f=0;
+            while (x <= x_finish)
+            {
+                if (x >= -9 && x <= -7)
+                    f = 0;
+                if (x > -7 && x <= -3)
+                    f = x + 7;
+                if (x > -3 && x < -2)
+                    f = 4;
+                if (x >= -2 && x <= 2)
+                    f = x * x;
+                if (x > 2 && x <= 4)
+                    f = -2 * x + 8;
+                Console.Write("x={0}\tf(x) = {1}\n", x, f);
+                x += dx;
+            }
+        }
+    }
+}
