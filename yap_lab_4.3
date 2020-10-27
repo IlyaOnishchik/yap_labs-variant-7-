@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Введите дату - ");
+        DateTime date = DateTime.Parse(Console.ReadLine());
+        Console.WriteLine("{0} дней прошло с начала года", date.DayOfYear);
+        Console.WriteLine("{0} осталось до конца года", 365 - date.DayOfYear);
+        DateTime yesterday = new DateTime(date.Year, date.Month, date.Day - 1);
+        Console.WriteLine("Вчера было: {0}", yesterday.ToString("dd MMM yyyy"));
+        DateTime tomorrow = new DateTime(date.Year, date.Month, date.Day + 1);
+        Console.WriteLine("Завтра будет: {0}", tomorrow.ToString("dd MMM yyyy"));
+        Console.ReadKey(true);
+    }
+}
