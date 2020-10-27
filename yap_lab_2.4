@@ -1,0 +1,13 @@
+using System;
+using System.ComponentModel;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Введите количество прошедших дней - ");
+        int days = int.Parse(Console.ReadLine());
+        DateTime date = DateTime.Now;
+        Console.Write("Неизвестна дата - {0}",date.AddDays(-days).ToString("dd MMM yyyy"));
+    }
+}
