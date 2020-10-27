@@ -1,0 +1,33 @@
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите радиус r = ");
+            int r = Convert.ToInt32(Console.ReadLine());
+
+            int i = 0;
+            while (i < 10)
+            {
+                Console.Write("Введите координату x = ");
+                int x = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Введите координату y = ");
+                int y = Convert.ToInt32(Console.ReadLine());
+
+                if ((x <= 0 && y >= 0) || (x >= 0 && y <= 0))
+                {
+                    if (y >= 0 && (x + r) * (x + r) + (y - r) * (y - r) >= r * r)
+                    {
+                        Console.WriteLine("попал");
+                    }
+                    else if (y <= 0 && x * x + y * y <= r * r) 
+                    {
+                        Console.WriteLine("попал");
+                    }
+                    else Console.WriteLine("мимо");
+                }
+                else Console.WriteLine("мимо");
+                i++;
+            }
+        }
+    }
+}
