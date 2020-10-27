@@ -1,0 +1,22 @@
+using System;
+
+namespace yap_lab_2._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("x=");
+            float x = float.Parse(Console.ReadLine());
+            Console.Write("y=");
+            float y = float.Parse(Console.ReadLine());
+            if (Math.Abs(y) <= 25 && Math.Abs(x) <= 50)
+            {
+                if (Math.Abs(y) == 25 || Math.Abs(x) == 50)
+                    Console.WriteLine("На границе");
+                else Console.WriteLine("Попала");
+            }
+            else Console.WriteLine("Не попала");
+        }
+    }
+}
